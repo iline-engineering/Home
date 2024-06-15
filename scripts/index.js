@@ -27,6 +27,25 @@ document.addEventListener("scroll", function () {
   }
 });
 
+// Set an interval to move the slide every 3 seconds (3000 milliseconds)
+const slideInterval = setInterval(() => {
+  moveSlide(1); // Move to the next slide
+}, 3000);
+
+document
+  .querySelector(".experience-section-carousel")
+  .addEventListener("mouseenter", () => {
+    clearInterval(slideInterval);
+  });
+
+document
+  .querySelector(".experience-section-carousel")
+  .addEventListener("mouseleave", () => {
+    slideInterval = setInterval(() => {
+      moveSlide(1);
+    }, 3000);
+  });
+
 function moveSlide(n) {
   const items = document.querySelectorAll(".carousel-item");
   const totalSlides = items.length;
