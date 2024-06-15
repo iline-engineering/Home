@@ -15,9 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("scroll", function () {
-  // console.log(window.scrollY);
+  console.log(window.scrollY);
+  console.log(header.style.opacity);
   if (window.scrollY > 5) {
-    header.style.opacity = 0.9;
+    header.style.opacity = 0.95;
   } else {
     header.style.opacity = 1;
   }
@@ -27,40 +28,20 @@ document.addEventListener("scroll", function () {
   }
 });
 
-// Set an interval to move the slide every 3 seconds (3000 milliseconds)
+// Set an interval to move the slide every 4 seconds (4000 milliseconds)
 const slideInterval = setInterval(() => {
   moveSlide(1); // Move to the next slide
-}, 3000);
-
-document
-  .querySelector(".experience-section-carousel")
-  .addEventListener("mouseenter", () => {
-    clearInterval(slideInterval);
-  });
-
-document
-  .querySelector(".experience-section-carousel")
-  .addEventListener("mouseleave", () => {
-    slideInterval = setInterval(() => {
-      moveSlide(1);
-    }, 3000);
-  });
+}, 4000);
 
 function moveSlide(n) {
   const items = document.querySelectorAll(".carousel-item");
   const totalSlides = items.length;
-  console.log(totalSlides);
-  // Hide the current slide
-  items[currentSlide].classList.remove("active");
 
   // Calculate the new slide index
   currentSlide = (currentSlide + n + totalSlides) % totalSlides;
 
   // Move the carousel
-  document.querySelector(".carousel-inner").style.transform = `translateX(-${
-    currentSlide * 100
-  }%)`;
-
-  // Show the new slide
-  items[currentSlide].classList.add("active");
+  const carouselInner = document.querySelector(".carousel-inner");
+  carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+  carouselInner.style.zIndex = -1;
 }
