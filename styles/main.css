@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+  /* Styles for mobile phones */
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 100vh;
+
+    background-color: #12143b;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 80px;
+
+    padding: 10px 16px;
+    background-color: aliceblue;
+  }
+
+  .nav-hamburer-menu {
+    cursor: pointer;
+    height: 36px;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+
+    background-color: rgb(94, 45, 45);
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    right: 0;
+
+    width: 160px;
+    height: calc(100vh - 80px);
+
+    background-color: antiquewhite;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+    padding: 10px;
+
+    list-style-type: none;
+  }
+
+  .nav-links ul li a {
+    text-decoration: none;
+    color: black;
+  }
+
+  main {
+    flex-grow: 1;
+  }
+
+  .hero-section {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .hero-section img {
+    width: 100vw;
+  }
+
+  .hero-section h1 {
+    padding: 10px;
+
+    font-size: 40px;
+  }
+
+  .hero-section p {
+    text-align: justify;
+    padding: 10px 30px 60px;
+  }
+
+  .mission-section {
+    background-color: rgba(110, 156, 91, 0.7);
+  }
+
+  .mission-section img {
+    width: 100vw;
+  }
+
+  .mission-section h1 {
+    padding: 40px 20px;
+
+    font-size: 40px;
+    background-color: aliceblue;
+  }
+
+  .mission-section p {
+    text-align: justify;
+    padding: 10px 30px 60px;
+  }
+
+  .vision-section {
+    background-color: rgba(192, 183, 101, 0.7);
+  }
+
+  .vision-section img {
+    width: 100vw;
+  }
+
+  .vision-section h1 {
+    padding: 10px;
+
+    padding: 40px 20px;
+
+    font-size: 40px;
+    background-color: aliceblue;
+  }
+
+  .vision-section p {
+    text-align: justify;
+    padding: 10px 30px 60px;
+  }
+
+  .experience-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 60px;
+  }
+
+  .experience-section h2 {
+    padding: 40px 40px 40px;
+    text-align: center;
+  }
+
+  .experience-section-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -24px;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    outline: none;
+    z-index: 1;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .carousel-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    row-gap: 20px;
+    min-width: 100%;
+  }
+
+  .carousel-item img {
+    width: 140px;
+    height: 140px;
+  }
+
+  footer {
+    height: 80px;
+    background-color: aliceblue;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Styles for mobile phones and smaller tablets */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Styles for tablets in portrait mode */
+}
