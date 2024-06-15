@@ -5,18 +5,12 @@ const header = document.getElementById("header");
 const navLinks = document.getElementById("nav-links");
 
 document.addEventListener("DOMContentLoaded", function () {
-  const carousel1 = document.querySelectorAll(".carousel-item")[0];
-
-  carousel1.classList.add("active");
-
   hamburgerMenu.addEventListener("click", () => {
     navLinks.classList.toggle("open");
   });
 });
 
 document.addEventListener("scroll", function () {
-  console.log(window.scrollY);
-  console.log(header.style.opacity);
   if (window.scrollY > 5) {
     header.style.opacity = 0.95;
   } else {
@@ -43,5 +37,4 @@ function moveSlide(n) {
   // Move the carousel
   const carouselInner = document.querySelector(".carousel-inner");
   carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
-  carouselInner.style.zIndex = -1;
 }

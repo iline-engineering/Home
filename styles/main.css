@@ -16,6 +16,7 @@
     min-height: 100vh;
 
     background-color: #12143b;
+    z-index: -2;
   }
 
   .header-nav {
@@ -32,19 +33,12 @@
 
     padding: 10px 16px;
     background-color: aliceblue;
+    z-index: 1;
   }
 
   .nav-hamburer-menu {
     cursor: pointer;
     height: 36px;
-  }
-
-  .bar {
-    width: 25px;
-    height: 3px;
-    margin: 4px 0;
-
-    background-color: rgb(94, 45, 45);
   }
 
   .nav-links {
