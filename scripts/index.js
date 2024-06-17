@@ -31,10 +31,14 @@ function moveSlide(n) {
   const items = document.querySelectorAll(".carousel-item");
   const totalSlides = items.length;
 
-  // Calculate the new slide index
-  currentSlide = (currentSlide + n + totalSlides) % totalSlides;
+  const width = window.innerWidth;
 
-  // Move the carousel
-  const carouselInner = document.querySelector(".carousel-inner");
-  carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+  if (width < 1025) {
+    // Calculate the new slide index
+    currentSlide = (currentSlide + n + totalSlides) % totalSlides;
+
+    // Move the carousel
+    const carouselInner = document.querySelector(".carousel-inner");
+    carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
 }
