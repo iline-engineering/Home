@@ -8,7 +8,37 @@ document.addEventListener("DOMContentLoaded", function () {
   hamburgerMenu.addEventListener("click", () => {
     navLinks.classList.toggle("open");
   });
+
+  // Full screen nav indicator animation effect
+
+  const marker = document.querySelector(".marker");
+  const navItems = document.querySelectorAll(".nav-item");
+  let selectedNav = navItems[0];
+
+  navItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      console.log("wawawee");
+      selectedNav = item;
+      setMarker(e.target, marker);
+    });
+
+    item.addEventListener("mouseover", (e) => {
+      setMarker(e.target, marker);
+    });
+
+    item.addEventListener("mouseout", () => {
+      setMarker(selectedNav, marker);
+    });
+  });
+
+  setMarker(selectedNav, marker);
 });
+
+// Function for nav indicator animation
+const setMarker = (e, marker) => {
+  marker.style.left = e.offsetLeft + "px";
+  marker.style.width = e.offsetWidth + "px";
+};
 
 document.addEventListener("scroll", function () {
   if (window.scrollY > 5) {
