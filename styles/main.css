@@ -1184,8 +1184,13 @@
   }
 
   .nav-links {
+    flex-grow: 1;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 2.5em;
   }
 
   .nav-links ul {
@@ -1226,8 +1231,10 @@
     padding-bottom: 20px;
   }
 
-  .social-links a img {
-    width: 46px;
+  .social-item a img {
+    width: 40px;
+    height: auto;
+    border-radius: 0.3em;
   }
 
   .nav-links ul li a {
