@@ -1146,7 +1146,7 @@
     min-height: 100vh;
     margin: 0 auto;
 
-    background-color: #6e6a88;
+    background-color: #002366;
     z-index: -2;
   }
 
@@ -1251,6 +1251,7 @@
     max-width: calc(100vw - 18em);
 
     background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
   }
 
   .hero-section {
@@ -1487,5 +1488,87 @@
 
   footer p {
     font-size: 1em;
+  }
+
+  /* Animation goes here */
+
+  .appear {
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+  }
+
+  .appear.in-view {
+    animation: appearAnimation 1s forwards;
+  }
+
+  @keyframes appearAnimation {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .appearBottom {
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+  }
+
+  .appearBottom.in-view {
+    animation: appearBottomAnimation 1s forwards;
+  }
+
+  @keyframes appearBottomAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .appearLeft {
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+  }
+
+  .appearLeft.in-view {
+    animation: appearLeftAnimation 1s forwards;
+  }
+
+  @keyframes appearLeftAnimation {
+    from {
+      opacity: 0;
+      transform: translateX(-60px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  .appearRight {
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+  }
+
+  .appearRight.in-view {
+    animation: appearLeftAnimation 1s forwards;
+  }
+
+  @keyframes appearRightAnimation {
+    from {
+      opacity: 0;
+      transform: translateX(60px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
   }
 }

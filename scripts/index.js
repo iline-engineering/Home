@@ -32,6 +32,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   setMarker(selectedNav, marker);
+
+  // Animation load or display on screen
+
+  const animatedElements = document.querySelectorAll(
+    ".appear, .appearBottom, .appearLeft, .appearRight"
+  );
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        observer.unobserve(entry.target); // Stop observing after the animation is triggered
+      }
+    });
+  });
+
+  animatedElements.forEach((element) => observer.observe(element));
 });
 
 // Function for nav indicator animation
