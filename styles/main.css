@@ -1492,21 +1492,35 @@
 
   /* Animation goes here */
 
+  /* Define classes with different transition durations */
+  .transition-0_5s {
+    --transition-duration: 0.5s;
+  }
+
+  .transition-1s {
+    --transition-duration: 1s;
+  }
+
+  .transition-1_5s {
+    --transition-duration: 1.5s;
+  }
+
   .appear {
     opacity: 0;
-    transition: opacity 1s, transform 1s;
+    transition: opacity var(--transition-duration),
+      transform var(--transition-duration);
   }
 
   .appear.in-view {
-    animation: appearAnimation 1s forwards;
+    animation: appearAnimation var(--transition-duration) forwards;
   }
 
   @keyframes appearAnimation {
-    from {
+    50% {
       opacity: 0;
       transform: scale(0.95);
     }
-    to {
+    100% {
       opacity: 1;
       transform: scale(1);
     }
@@ -1514,19 +1528,20 @@
 
   .appearBottom {
     opacity: 0;
-    transition: opacity 1s, transform 1s;
+    transition: opacity var(--transition-duration),
+      transform var(--transition-duration);
   }
 
   .appearBottom.in-view {
-    animation: appearBottomAnimation 1s forwards;
+    animation: appearBottomAnimation var(--transition-duration) forwards;
   }
 
   @keyframes appearBottomAnimation {
-    from {
+    50% {
       opacity: 0;
       transform: translateY(20px) scale(0.9);
     }
-    to {
+    100% {
       opacity: 1;
       transform: translateY(0) scale(1);
     }
@@ -1534,19 +1549,20 @@
 
   .appearLeft {
     opacity: 0;
-    transition: opacity 1s, transform 1s;
+    transition: opacity var(--transition-duration),
+      transform var(--transition-duration);
   }
 
   .appearLeft.in-view {
-    animation: appearLeftAnimation 1s forwards;
+    animation: appearLeftAnimation var(--transition-duration) forwards;
   }
 
   @keyframes appearLeftAnimation {
-    from {
+    50% {
       opacity: 0;
       transform: translateX(-60px) scale(0.9);
     }
-    to {
+    100% {
       opacity: 1;
       transform: translateX(0) scale(1);
     }
@@ -1554,19 +1570,20 @@
 
   .appearRight {
     opacity: 0;
-    transition: opacity 1s, transform 1s;
+    transition: opacity var(--transition-duration),
+      transform var(--transition-duration);
   }
 
   .appearRight.in-view {
-    animation: appearLeftAnimation 1s forwards;
+    animation: appearLeftAnimation var(--transition-duration) forwards;
   }
 
   @keyframes appearRightAnimation {
-    from {
+    50% {
       opacity: 0;
       transform: translateX(60px) scale(0.9);
     }
-    to {
+    100% {
       opacity: 1;
       transform: translateX(0) scale(1);
     }
