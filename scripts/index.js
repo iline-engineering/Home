@@ -1,10 +1,24 @@
 let currentSlide = 0;
 
 const hamburgerMenu = document.getElementById("hamburger-menu");
-const header = document.getElementById("header");
+const header = document.querySelector("header");
 const navLinks = document.getElementById("nav-links");
 
 document.addEventListener("DOMContentLoaded", function () {
+  // scroll event listener
+  document.addEventListener("scroll", function () {
+    // set header opacity when scrolling
+    if (window.scrollY > 1) {
+      header.style.opacity = 0.9;
+    } else {
+      header.style.opacity = 1;
+    }
+
+    // if (navLinks.classList.contains("open")) {
+    //   navLinks.classList.remove("open");
+    // }
+  });
+
   hamburgerMenu.addEventListener("click", () => {
     navLinks.classList.toggle("open");
   });
@@ -56,18 +70,6 @@ const setMarker = (e, marker) => {
   marker.style.left = e.offsetLeft + "px";
   marker.style.width = e.offsetWidth + "px";
 };
-
-document.addEventListener("scroll", function () {
-  if (window.scrollY > 5) {
-    header.style.opacity = 0.95;
-  } else {
-    header.style.opacity = 1;
-  }
-
-  if (navLinks.classList.contains("open")) {
-    navLinks.classList.remove("open");
-  }
-});
 
 // Set an interval to move the slide every 4 seconds (4000 milliseconds)
 const slideInterval = setInterval(() => {
