@@ -322,6 +322,45 @@
     }
   }
 
+  .qr-container {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    padding: 0.5em;
+
+    background-color: rgba(29, 28, 28, 0.9);
+  }
+
+  .qr-icon {
+    display: block;
+  }
+
+  .qr-icon img {
+    height: 2.6em;
+    width: auto;
+  }
+
+  .qr-image{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    height: 100%;
+  }
+
+  .qr-image img{
+    height: 8em;
+    width: auto;
+  }
+
+  .qr-image p {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+
   footer {
     display: flex;
     flex-direction: column;
