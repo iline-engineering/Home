@@ -279,9 +279,9 @@
     ); */
   }
 
-  .experience-slider:hover .slider-item {
+  /* .experience-slider:hover .slider-item {
     animation-play-state: paused;
-  }
+  } */
 
   .slider-item {
     position:absolute;
@@ -292,8 +292,8 @@
     gap: 1em;
     align-items: center;
 
-    animation: autoRun 10s linear infinite;
-    animation-delay: calc((10s / 3) * (var(--position) - 1));
+    animation: autoRun 20s linear infinite;
+    animation-delay: calc((10s / 4) * (var(--position) - 1));
   }
 
   .slider-item div {
@@ -318,7 +318,7 @@
     from {
       left:100%;
     } to {
-      left:calc(-40vw * 1)
+      left:calc((-40% * 8) * 1)
     }
   }
 

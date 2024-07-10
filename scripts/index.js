@@ -1,10 +1,16 @@
 const navMenu = document.querySelector(".nav-menu");
 const header = document.querySelector("header");
 const navLinks = document.querySelector(".nav-links");
+
 const qrScanner = document.querySelector(".qr-container");
 const qrIcon = document.querySelector(".qr-icon");
 const qrImage = document.querySelector(".qr-image");
 const qrImageCloseButton = document.querySelector(".qr-image p");
+
+const experienceSlider = document.querySelector(".experience-slider");
+const sliderItems = document.querySelectorAll(".slider-item");
+let isDragging = false;
+let startX, offsetX;
 
 document.addEventListener("DOMContentLoaded", function () {
   // scroll event listener
@@ -66,4 +72,41 @@ document.addEventListener("DOMContentLoaded", function () {
     qrIcon.style.display = "block";
     qrImage.style.display = "none";
   });
+
+  const startDrag = (e) => {
+    isDragging = true;
+    const clientX = e.clientX || e.touches[0].clientX;
+    startX = clientX;
+  };
+
+  const drag = (e) => {
+    // if (isDragging) {
+    //   const clientX = e.clientX || e.touches[0].clientX;
+    //   if (startX - clientX >= 50) {
+    //     isDragging = false;
+    //     sliderItems.forEach((item) => {
+    //       item.style.animation = "autoRun 10s linear infinite";
+    //       item.style.animationDelay = "calc((5s / 4) * (var(--position) - 1))";
+    //     });
+    //     setTimeout(() => {
+    //       sliderItems.forEach((item) => {
+    //         item.style.animation = "autoRun 20s linear infinite";
+    //         item.style.animationDelay =
+    //           "calc((10s / 4) * (var(--position) - 1))";
+    //       });
+    //     }, 1000);
+    //   }
+    // }
+  };
+
+  const endDrag = () => {
+    isDragging = false;
+  };
+
+  experienceSlider.addEventListener("mousedown", startDrag);
+  experienceSlider.addEventListener("touchstart", startDrag);
+  experienceSlider.addEventListener("mousemove", drag);
+  experienceSlider.addEventListener("touchmove", drag);
+  experienceSlider.addEventListener("mouseup", endDrag);
+  experienceSlider.addEventListener("touchend", endDrag);
 });
