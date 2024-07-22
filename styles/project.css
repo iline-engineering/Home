@@ -147,6 +147,20 @@
     width: 90%;
   }
 
+  .item div {
+    margin-top: 0.8em;
+    width: 90%;
+    border: var(--secondary-color) 0.15em solid;
+  }
+
+  .item h2 {
+    font-size: 1.1em;
+  }
+
+  .item p {
+    font-size: 0.9em;
+  }
+
   footer {
     display: flex;
     flex-direction: column;
