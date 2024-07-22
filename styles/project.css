@@ -121,7 +121,22 @@
   }
 
   .title {
-    padding: 2em 0 2em 0.6em;
+    padding: 1.6em 0 0 0.6em;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  .title-container div {
+    margin-bottom: 1.6em;
+    width: 90%;
+    border: var(--secondary-color) 0.15em solid;
   }
 
   .project-container {
