@@ -23,13 +23,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  window.addEventListener("resize", () => {
+    let width =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+    if (width >= 1367) {
+      navLinks.style.display = "flex";
+    } else {
+      navLinks.style.display = "none";
+    }
+  });
+
   navMenu.addEventListener("click", () => {
     console.log("click");
     navLinks.style.display = "flex";
   });
 
   navLinks.addEventListener("click", () => {
-    navLinks.style.display = "none";
+    const navMenuComputedStyle = window.getComputedStyle(navMenu);
+    if (navMenuComputedStyle.display !== "none") {
+      navLinks.style.display = "none";
+    } else {
+      navLinks.style.display = "flex";
+    }
   });
 
   document.querySelectorAll(".same-page-nav").forEach((anchor) => {
@@ -49,28 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
         behavior: "smooth",
       });
     });
-  });
-
-  qrIcon.addEventListener("click", () => {
-    qrScanner.style.top = "0";
-    qrScanner.style.right = "0";
-    qrScanner.style.bottom = "auto";
-    qrScanner.style.height = "100vh";
-    qrScanner.style.width = "100vw";
-
-    qrIcon.style.display = "none";
-    qrImage.style.display = "flex";
-  });
-
-  qrImageCloseButton.addEventListener("click", () => {
-    qrScanner.style.height = "auto";
-    qrScanner.style.width = "auto";
-    qrScanner.style.top = "auto";
-    qrScanner.style.bottom = "1em";
-    qrScanner.style.right = "1em";
-
-    qrIcon.style.display = "block";
-    qrImage.style.display = "none";
   });
 
   const startDrag = (e) => {
