@@ -79,21 +79,27 @@ main {
   height: 100%;
 }
 
+.hero-image-landscape {
+  opacity: 0.55;
+}
+
+.hero-image-portrait {
+  opacity: 0.55;
+}
+
 .hero-section h1 {
-  color: var(--secondary-color);
+  color: rgb(255, 255, 255);
   font-size: 2.4em;
-  text-shadow: -1px -1px 0 rgb(185, 179, 179), 1px -1px 0 rgb(185, 179, 179),
-    -1px 1px 0 rgb(185, 179, 179), 1px 1px 0 rgb(185, 179, 179);
+  /* text-shadow: 1px 1px 1px rgba(185, 179, 179); */
 
   z-index: 1;
 }
 
 .hero-section p {
-  color: var(--secondary-color);
+  color: rgb(255, 255, 255);
   font-weight: bold;
   text-align: justify;
-  text-shadow: -1px -1px 0 rgb(185, 179, 179), 1px -1px 0 rgb(185, 179, 179),
-    -1px 1px 0 rgb(185, 179, 179), 1px 1px 0 rgb(185, 179, 179);
+  /* text-shadow: 1px 1px 1px rgba(185, 179, 179); */
 
   z-index: 1;
 }
