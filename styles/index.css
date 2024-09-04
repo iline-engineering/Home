@@ -80,22 +80,20 @@ main {
 }
 
 .hero-section h1 {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 2.4em;
-  text-shadow: -1px -1px 0 var(--secondary-color),
-    1px -1px 0 var(--secondary-color), -1px 1px 0 var(--secondary-color),
-    1px 1px 0 var(--secondary-color);
+  text-shadow: -1px -1px 0 rgb(185, 179, 179), 1px -1px 0 rgb(185, 179, 179),
+    -1px 1px 0 rgb(185, 179, 179), 1px 1px 0 rgb(185, 179, 179);
 
   z-index: 1;
 }
 
 .hero-section p {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-weight: bold;
   text-align: justify;
-  text-shadow: -1px -1px 0 var(--secondary-color),
-    1px -1px 0 var(--secondary-color), -1px 1px 0 var(--secondary-color),
-    1px 1px 0 var(--secondary-color);
+  text-shadow: -1px -1px 0 rgb(185, 179, 179), 1px -1px 0 rgb(185, 179, 179),
+    -1px 1px 0 rgb(185, 179, 179), 1px 1px 0 rgb(185, 179, 179);
 
   z-index: 1;
 }
