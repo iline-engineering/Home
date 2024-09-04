@@ -288,6 +288,11 @@ footer {
   color: var(--primary-color);
 }
 
+.footer-social-links a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
 .nav-footer-logo {
   height: 4em;
   width: auto;
