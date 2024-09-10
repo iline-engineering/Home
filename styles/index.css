@@ -219,14 +219,16 @@ main {
 }
 
 .slider-item div {
-  width: 100%;
+  width: calc(40vw);
   background-color: #4b4949;
   height: 0.17em;
   border-radius: 2em;
 }
 
 .slider-item p {
-  font-size: 1em;
+  width: calc(40vw);
+  text-align: center;
+  font-size: 0.8em;
   font-weight: bold;
   color: var(--primary-color);
 }
@@ -929,10 +931,12 @@ footer {
   }
 
   .slider-item div {
+    width: calc(15vw);
     height: 0.5em;
   }
 
   .slider-item p {
+    width: calc(15vw);
     font-size: 1.5em;
   }
 
