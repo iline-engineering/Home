@@ -284,6 +284,7 @@ footer {
   flex-direction: column;
   gap: 1em;
 
+  width: 100%;
   padding: 2em 1em;
 
   background-color: #1d1c1c;
@@ -296,7 +297,7 @@ footer {
 }
 
 .nav-footer-logo {
-  height: 4em;
+  height: 2.5em;
   width: auto;
 }
 
